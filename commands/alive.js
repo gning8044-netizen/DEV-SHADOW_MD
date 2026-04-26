@@ -1,7 +1,7 @@
 const settings = require("../settings");
 async function aliveCommand(sock, chatId, message) {
     try {
-        const message1 = `*🤖 𝚳𝐔𝚭𝚫𝚴 MD is Active!*\n\n` +
+        const message1 = `*🤖 𝐃𝐄𝐕 𝐒𝐇𝐀𝐃𝐎𝐖-𝐌𝐃 is Active!*\n\n` +
                        `*Version:* ${settings.version}\n` +
                        `*Status:* Online\n` +
                        `*Mode:* Public\n\n` +
@@ -18,8 +18,8 @@ async function aliveCommand(sock, chatId, message) {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363419493700705@newsletter',
-                    newsletterName: '𝚳𝐔𝚭𝚫𝚴 MD',
+                    newsletterJid: '',
+                    newsletterName: '𝐃𝐄𝐕 𝐒𝐇𝐀𝐃𝐎𝐖-𝐌𝐃',
                     serverMessageId: -1
                 }
             }
