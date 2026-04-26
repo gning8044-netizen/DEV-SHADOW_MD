@@ -4,7 +4,7 @@ const path = require('path');
 
 async function helpCommand(sock, chatId, message) {
     const helpMessage = `
-╭━━━━〔 *${settings.botName || '𝚳𝐔𝚭𝚫𝚴-MD'}* 〕━━━━╮
+╭━━━━〔 *${settings.botName || '𝐃𝐄𝐕 𝐒𝐇𝐀𝐃𝐎𝐖-𝐌𝐃'}* 〕━━━━╮
 ┃ 🛠️ Version: *${settings.version || '1.0.0'}*
 ┃ 👤 Owner: *${settings.botOwner || 'Papii'}*
 ┃ 
@@ -12,72 +12,83 @@ async function helpCommand(sock, chatId, message) {
 
 *COMMAND LIST:*
 
-╭───〔 🌐 *GENERAL* 〕───╮
-│ ● .help | .menu
-│ ● .ping
-│ ● .alive
-│ ● .tts <text>
-│ ● .owner
-│ ● .joke | .quote | .fact
-│ ● .weather | .news
-│ ● .attp | .lyrics
-│ ● .8ball | .groupinfo
-│ ● .staff | .vv
-│ ● .trt | .ss | .jid | .url
-╰━━━━━━━━━━━━━━━━━━━━━━╯
+*┏━━〔 💠 𝐌𝐀𝐈𝐍 〕*
+┃ ❍ .ᴀʟɪᴠᴇ
+┃ ❍ .ᴘɪɴɢ
+┃ ❍ .ᴀʙᴏᴜᴛ
+┃ ❍ .ᴏᴡɴᴇʀ
+┃ ❍ .ᴜᴘᴛɪᴍᴇ
+┃ ❍ .ᴄʜᴀɴɴᴇʟ
+┗━━━━━━━━━━━━┛
 
-╭───〔 👮 *ADMIN* 〕───╮
-│ ✧ .ban | .kick | .warn
-│ ✧ .promote | .demote
-│ ✧ .mute | .unmute
-│ ✧ .delete | .clear
-│ ✧ .tagall | .hidetag
-│ ✧ .antilink | .antibadword
-│ ✧ .welcome | .goodbye
-│ ✧ .setgname | .setgpp
-╰━━━━━━━━━━━━━━━━━━━━━━╯
+*┏━━〔 👥 𝐆𝐑𝐎𝐔𝐏 〕*
+┃ ❍ .ᴀᴅᴅ
+┃ ❍ .ᴋɪᴄᴋ
+┃ ❍ .ᴘʀᴏᴍᴏᴛᴇ
+┃ ❍ .ᴅᴇᴍᴏᴛᴇ
+┃ ❍ .ᴀᴅᴍɪɴs
+┃ ❍ .ᴛᴀɢᴀʟʟ
+┃ ❍ .ʜɪᴅᴇᴛᴀɢ
+┃ ❍ .ᴏᴘᴇɴ
+┃ ❍ .ᴄʟᴏsᴇ
+┃ ❍ .ɢɪɴғᴏ
+┃ ❍ .ᴡᴇʟᴄᴏᴍᴇ
+┃ ❍ .ɢᴏᴏᴅʙʏᴇ
+┃ ❍ .ᴡᴀʀɴ
+┃ ❍ .ᴍᴜᴛᴇ
+┃ ❍ .ᴜɴᴍᴜᴛᴇ
+┃ ❍ .ᴀɴᴛɪʙᴏᴛ
+┃ ❍ .ᴀɴᴛɪsᴘᴀᴍ
+┗━━━━━━━━━━━━┛
 
-╭───〔 🔒 *OWNER* 〕───╮
-│ ◈ .mode <public/private>
-│ ◈ .clearsession | .cleartmp
-│ ◈ .update | .settings
-│ ◈ .autostatus | .autoread
-│ ◈ .anticall | .pmblocker
-│ ◈ .setpp | .setmention
-╰━━━━━━━━━━━━━━━━━━━━━━╯
+*┏━━〔 🤖 𝐀𝐈 𝐓𝐎𝐎𝐋𝐒 〕*
+┃ ❍ .ᴀɪ
+┃ ❍ .ɢᴘᴛ
+┃ ❍ .ɢᴇᴍɪɴɪ
+┃ ❍ .ᴄʟᴀᴜᴅᴇ
+┃ ❍ .ᴅᴇᴇᴘsᴇᴇᴋ
+┃ ❍ .ᴄᴏᴅᴇᴀɪ
+┗━━━━━━━━━━━━┛
 
-╭───〔 🎨 *EDITING* 〕───╮
-│ 🖋️ .sticker | .simage
-│ 🖋️ .remini | .removebg
-│ 🖋️ .blur | .crop | .meme
-│ 🖋️ .take | .emojimix
-│ 🖋️ .igs | .igsc
-╰━━━━━━━━━━━━━━━━━━━━━━╯
+*┏━━〔 📥 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 〕*
+┃ ❍ .ᴘʟᴀʏ
+┃ ❍ .ᴠɪᴅᴇᴏ
+┃ ❍ .ᴀᴜᴛᴏsᴏɴɢ
+┃ ❍ .ғʙ
+┃ ❍ .ɪɴsᴛᴀ
+┃ ❍ .ᴛɪᴋᴛᴏᴋ
+┃ ❍ .sᴘᴏᴛɪғʏ
+┃ ❍ .ʏᴛsᴇᴀʀᴄʜ
+┗━━━━━━━━━━━━┛
 
-╭───〔 🤖 *AI & GAMES* 〕───╮
-│ 🧠 .gpt | .gemini
-│ 🖼️ .imagine | .flux | .sora
-│ 🎮 .tictactoe | .hangman
-│ 🎮 .trivia | .truth | .dare
-╰━━━━━━━━━━━━━━━━━━━━━━╯
+*┏━━〔 🛠️ 𝐔𝐓𝐈𝐋𝐈𝐓𝐘 〕*
+┃ ❍ .ᴡᴇᴀᴛʜᴇʀ
+┃ ❍ .ᴛʀᴀɴsʟᴀᴛᴇ
+┃ ❍ .ᴄᴀʟᴄ
+┃ ❍ .ǫʀ
+┃ ❍ .ɢᴏᴏɢʟᴇ
+┃ ❍ .ɢᴇᴛᴅᴘ
+┃ ❍ .sᴀᴠᴇ
+┗━━━━━━━━━━━━┛
 
-╭───〔 📥 *DOWNLOADER* 〕───╮
-│ ↓ .play | .song | .video
-│ ↓ .spotify | .ytmp4
-│ ↓ .instagram | .facebook
-│ ↓ .tiktok
-╰━━━━━━━━━━━━━━━━━━━━━━╯
+*┏━━〔 ⚙️ 𝐎𝐖𝐍𝐄𝐑 〕*
+┃ ❍ .ᴀɴᴛɪᴄᴀʟʟ
+┃ ❍ .ᴀɴᴛɪᴇᴅɪᴛ
+┃ ❍ .ᴀɴᴛɪᴅᴇʟᴇᴛᴇ
+┃ ❍ .ᴀɴᴛɪʟɪɴᴋ
+┃ ❍ .ᴀɴᴛɪɢʀᴏᴜᴘ
+┃ ❍ .sᴇᴛᴛɪɴɢs
+┃ ❍ .ᴍᴏᴅᴇ
+┃ ❍ .ʙᴏᴛɴᴀᴍᴇ
+┃ ❍ .ʙᴏᴛɪᴍᴀɢᴇ
+┃ ❍ .sᴇᴛᴘʀᴇғɪx
+┃ ❍ .ᴀʟʟᴠᴀʀ
+┃ ❍ .ʙʀᴏᴀᴅᴄᴀsᴛ
+┃ ❍ .ʀᴇsᴛᴀʀᴛ
+┃ ❍ .ᴊɪᴅ
+┗━━━━━━━━━━━━┛
 
-╭───〔 🔤 *TEXTMAKER* 〕───╮
-│ ✎ .neon | .glitch | .fire
-│ ✎ .ice | .snow | .matrix
-│ ✎ .hacker | .devil | .sand
-╰━━━━━━━━━━━━━━━━━━━━━━╯
-
-╭───〔 💻 *SYSTEM* 〕───╮
-│ ⚙️ .git | .github
-│ ⚙️ .sc | .repo | .script
-╰━━━━━━━━━━━━━━━━━━━━━━╯
+> ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ *DEV SHADOW TECH* ✨
 
 *Join our channel for updates:*`;
 
@@ -88,8 +99,8 @@ async function helpCommand(sock, chatId, message) {
             forwardingScore: 1,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363419493700705@newsletter',
-                newsletterName: '𝚳𝐔𝚭𝚫𝚴 MD',
+                newsletterJid: '',
+                newsletterName: 'DEV SHADOW MD',
                 serverMessageId: -1
             }
         };
